@@ -8,7 +8,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "n-ui": ["./lib/main.tsx"]
+      "nretro-ui": ["./lib/main.tsx"]
     },
 
     /* Bundler mode */
@@ -26,5 +26,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "lib/button", "lib/main.tsx"]
+  "include": ["src", "lib"]
 }

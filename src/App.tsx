@@ -1,4 +1,4 @@
-import { Button } from "n-ui"
+import { Button } from "nretro-ui"
 
 function App() {
 

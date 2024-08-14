@@ -2,17 +2,18 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react-swc'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths(), dts({ rollupTypes: true })],
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'lib/main.js'),
-      name: 'n-ui',
+      entry: resolve(__dirname, 'lib/main.tsx'),
+      name: 'nretro-ui',
       // the proper extensions will be added
-      fileName: 'n-ui',
+      fileName: 'nretro-ui',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
