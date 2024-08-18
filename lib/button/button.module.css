@@ -1,5 +1,5 @@
 /* Button.module.css */
-:global(:root) {
+:root {
     --red: #C8102E;
     --color-text: #ffffff;
     --color-text-black: #000000;

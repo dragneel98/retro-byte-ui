@@ -4,7 +4,7 @@ export {TextInput} from "./textInput/textInput"
 export {Select} from "./select/select"
 export {CopyText} from "./copyText/copyText"
 export {Accordion} from "./accordion/Accordion"
-// export {DropDown} from "./dropDown"
+export {Dropdown} from "./dropDown/dropDown"
 //cards
 export {ProductCard} from "./cards/product/product"
 export {UserCard} from "./cards/user/user"

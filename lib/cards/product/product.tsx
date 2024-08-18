@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import styles from './product.module.css';
 import { FaHeart } from "react-icons/fa";
+import { FaHeartBroken } from "react-icons/fa";
 import { Button } from "retro-byte-ui";
 
 interface Product {
@@ -13,6 +15,11 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    const [favorite, setFavorite] = useState(false)
+    const addFavorite = () =>{
+        if(favorite === true) setFavorite(false)
+        else setFavorite(true)
+    } 
     return (
         <div className={styles.card}>
             <img
@@ -23,7 +30,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <div className={styles.details}>
                 <div className={styles.header}>
                     <h2 className={styles.name}>{product.name}</h2>
-                    <button className={styles.favorite}><FaHeart /></button>
+                    <button className={styles.favorite} onClick={addFavorite}>
+                       { favorite ? <FaHeartBroken/> : <FaHeart />} 
+                        </button>
                 </div>
                 <p className={styles.price}>${product.price}</p>
                 <div className={styles.buttonContainer}>

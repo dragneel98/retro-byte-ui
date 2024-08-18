@@ -1,3 +1,8 @@
+:root{
+    --primary-color: #2B2B38;
+    --grey-color: #909aa1;
+}
+
 .h3, .p {
     padding: 0;
     margin: 0;

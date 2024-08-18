@@ -5,6 +5,8 @@
     max-height: 100px;
     width: 100%;
     scrollbar-width: none;
+    border-radius: 0.5em;
+    outline: none;
 }
 .textarea::-webkit-scrollbar {
     display: none; /* Ocultar barra de desplazamiento en WebKit (Chrome, Safari) */

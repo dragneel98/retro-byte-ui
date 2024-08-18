@@ -4,9 +4,15 @@ import { GoCopy } from "react-icons/go";
 
 interface CopyTextProps {
     textToCopy?: string;
+    backgroundColor?: string;
+    primaryColor?: string;
 }
 
-export const CopyText: React.FC<CopyTextProps> = ({ textToCopy = "npm install retroByteUI@latest" }) => {
+export const CopyText: React.FC<CopyTextProps> = ({ textToCopy = "npm install retroByteUI@latest", backgroundColor= "#434347", primaryColor= "#EFEFEF"}) => {
+    const customStyles = {
+        '--primary-color': primaryColor,
+        '--secondary-color': backgroundColor,
+    } as React.CSSProperties;
 
     const handleCopyClick = async (): Promise<void> => {
         try {
@@ -17,7 +23,7 @@ export const CopyText: React.FC<CopyTextProps> = ({ textToCopy = "npm install re
     };
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} style={customStyles}>
             <p className={styles.text}>{textToCopy}</p>
             <button className={styles.button} onClick={handleCopyClick}><GoCopy /></button>
         </div>

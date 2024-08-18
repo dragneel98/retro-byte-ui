@@ -18,12 +18,7 @@ export const Default: Story = {
   args: {
     title: "Default Title",
     content: "This is the default content for the accordion.",
-  },
-};
-
-export const CustomAccordion: Story = {
-  args: {
-    title: "Custom Title",
-    content: "This is some custom content for the accordion.",
+    primaryColor: "#ccc",
+    secondaryColor: "#f8f8f8",
   },
 };
