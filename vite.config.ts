@@ -11,9 +11,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'lib/main.tsx'),
-      name: 'nretro-ui',
+      name: 'RetroByteUi',
       // the proper extensions will be added
-      fileName: 'nretro-ui',
+      fileName: 'RetroByteUi',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

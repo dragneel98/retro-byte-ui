@@ -1,0 +1,72 @@
+/* :root{
+  font-family: "lettera mono";
+} */
+
+.customSelect {
+    position: relative;
+    width: 250px;
+    font-family: "lettera mono";
+    display: flex;
+    align-items: center;
+  }
+  
+  .selectedOption {
+    width: 250px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 1em;
+    padding-bottom: 0.5em;
+    border-radius: 1.5em 1.5em 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #f8f8f8;
+  }
+  .selectedOptionP{
+    text-align: start;
+    margin: 0;
+    padding: 0;
+  }
+  .optionsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* background-color: #fff; */
+    background-color:  #f8f8f8;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 1.5em 1.5em;
+    box-sizing: border-box;
+  }
+  
+  .option {
+    cursor: pointer;
+    padding: 1em;
+  }
+  
+  .option:hover {
+    background-color:  #f0f0f0;
+    /* border-radius: 1.5em 1.5em 0 0; */
+    border-radius: 0 0 1.5em 1.5em;
+  }
+
+  .arrowIcon {
+    transition: transform 0.3s ease; 
+    margin: 0 auto;
+  }
+
+  .arrowIcon.rotate {
+    animation: rotateArrow 0.3s ease forwards; /* Aplica la animación de rotación */
+  }
+
+  @keyframes rotateArrow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}

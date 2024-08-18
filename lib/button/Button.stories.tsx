@@ -1,24 +1,19 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from './button';
 
-import { Button } from './Button'
-
+//👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof Button> = {
-	component: Button
-}
+  component: Button,
+  title: 'Components/Button',
+};
 
-export default meta
+export default meta;
+type Story = StoryObj<typeof Button>;
 
-type Story = StoryObj<typeof Button>
-
-export const Default: Story = {
-	args: {
-		children: 'Click me!'
-	}
-}
-
-export const Emoji: Story = {
-	args: {
-		children: '😅'
-	}
-}
-
+export const  Default: Story = {
+  args: {
+    children: "click me",
+    type: "primary",
+    onClick: ()=> {console.log("click");}
+  },
+};

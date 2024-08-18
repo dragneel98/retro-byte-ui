@@ -1,9 +1,22 @@
-import type { ReactNode } from "react";
+import React, { ReactNode } from 'react';
+import styles from "./button.module.css";
 
 interface ButtonProps {
-	children: ReactNode;
-}
+    children: ReactNode;
+    type?: "primary" | "secondary" | "tertiary";
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  }
+// const getStyles = (...args: (string | undefined)[]): string => {
+//   return ["button", ...args].filter(Boolean).join(" ");
+// };
+const getStyles = (...args: (string | undefined)[]): string => {
+    return [styles.button, ...args.map(arg => arg ? styles[arg] : '')].filter(Boolean).join(" ");
+  };
 
-export const Button = ({ children }: ButtonProps): ReactNode => {
-	return <button>{children}</button>;
+export const Button: React.FC<ButtonProps> = ({ children, type, onClick }): ReactNode => {
+  return (
+    <button className={getStyles(type)} onClick={onClick}>
+      {children}
+    </button>
+  );
 };

@@ -1,0 +1,66 @@
+:root{
+    font-family: "ntype";
+    --primary-color: rgb(0, 128, 0);
+    --secondary-color: #2B2B38;
+}
+
+.container{
+    width: 600px;
+    font-family: "ntype";
+}
+.entryArea{
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+}
+.input{
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 2.2em;
+    line-height: 80px;
+    padding: 0 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 11;
+}
+
+.label{
+    position: absolute;
+    font-size: 1.6em;
+    color: black;
+    padding: 0 25px;
+    margin: 0 20px;
+    transition: 0.2s ease;
+    font-family: "ntype";
+}
+
+.input:focus{
+    color: var(--primary-color);
+    border: 4px solid var(--primary-color) ;
+}
+.input:focus + .label{
+    color: var(--primary-color);
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px, -16px) scale(0.7);
+    z-index: 111;
+    /* background-color: inherit; */
+    background-color: var(--secondary-color);
+}
+.logoContainer {
+    position: absolute;
+    right: 10px; 
+    /* transform: translateY(-50%); */
+}
+
+.filled{
+    color: var(--primary-color);
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px, -16px) scale(0.7);
+    z-index: 111;
+    /* background-color: white; */
+}

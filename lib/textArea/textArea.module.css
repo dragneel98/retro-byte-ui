@@ -1,0 +1,15 @@
+.textarea{
+    resize: none;
+    field-sizing: content;
+    min-height: 50px;
+    max-height: 100px;
+    width: 100%;
+    scrollbar-width: none;
+}
+.textarea::-webkit-scrollbar {
+    display: none; /* Ocultar barra de desplazamiento en WebKit (Chrome, Safari) */
+}
+/* 
+*{
+    box-sizing: border-box;
+  } */

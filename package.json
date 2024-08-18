@@ -1,16 +1,16 @@
 {
-  "name": "nretro-ui",
-  "version": "0.0.8",
+  "name": "retro-byte-ui",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/nretro-ui.umd.cjs",
-  "module": "./dist/nretro-ui.js",
+  "main": "./dist/retro-byte-ui.umd.cjs",
+  "module": "./dist/retro-byte-ui.js",
   "exports": {
     ".": {
-      "import": "./dist/nretro-ui.js",
-      "require": "./dist/nretro-ui.umd.cjs"
+      "import": "./dist/retro-byte-ui.js",
+      "require": "./dist/retro-byte-ui.umd.cjs"
     }
   },
   "scripts": {
@@ -26,6 +26,9 @@
     "nretro-ui": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.2",
+    "react-icons": "^5.3.0",
+    "retro-byte-ui": "file:",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {

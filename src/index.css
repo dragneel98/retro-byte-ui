@@ -1,68 +1,39 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --background-color: #f8f8f8;
+  --background-color-dark: black;
+  --border-bottom-color: #ccc;
+  --border-bottom-color-dark: #434347;
+  --red: #C8102E;
+  --primary-color: #EFEFEF;
+  --white-color:#FFFFFF;
+  --grey-color: #909aa1;
+  --green-color: #050f0e;
+  --icon-color: #F2509C;
+  --secondary-color: #2B2B38;
+  --nav-color: #252530;
+  /* --background-color: #EDEDFF; */
+  --border-bottom-color : #E8E8E8;
+  --background-color-cart: #F2F2F2;
+  --background-color-select: #f0f0f0;
+  --search-color: #434347;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family:"lettera mono" ;
+  src: url("/public/fuentes_retro_futuristas/Lettera_Mono_LL_Cond_Light-normal-400-100.otf"),  
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@font-face {
+  font-family: "dotmbold";
+  src: url("/public/fuentes_retro_futuristas/DOTMBold.TTF");
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@font-face {
+  font-family: "ndot";
+  src: url("/public/fuentes_retro_futuristas/Ndot-normal-400-100.otf");
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+@font-face {
+  font-family: "ntype";
+  src: url("/public/fuentes_retro_futuristas/NType\ 82-normal-400-100.otf");
 }
