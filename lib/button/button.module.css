@@ -1,15 +1,9 @@
-/* Button.module.css */
 :root {
     --red: #C8102E;
     --color-text: #ffffff;
     --color-text-black: #000000;
     --border-bottom-color: #ccc;
   }
-  
-  /* :global(@font-face) {
-    font-family: "ndot";
-    src: url("../../../../public/fonts/fuentes retro futuristas/Ndot-normal-400-100.otf");
-  } */
   
   .button {
     font-family: "ndot";
