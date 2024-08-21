@@ -9,7 +9,6 @@ export default {
         product: {
             name: 'Sample Product',
             price: 99.99,
-            // image: 'https://via.placeholder.com/300x200'
             image: 'https://via.placeholder.com/300x200'
         }
     }
@@ -31,7 +30,12 @@ export const ProductExample = () => {
     return (
         <div style={{ width: 200 }}>
             <h1>Product</h1>
-            <ProductCard product={product} />
+            <ProductCard
+                product={product}
+                cartOnclick={() => { alert("add to cart") }}
+                favoriteOnclick={() => { alert("add to favorite") }}
+            />
+
         </div>
     );
 };

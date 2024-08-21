@@ -12,13 +12,16 @@ interface Product {
 
 interface ProductCardProps {
     product: Product;
+    favoriteOnclick: ()=> void;
+    cartOnclick: ()=> void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, favoriteOnclick, cartOnclick }) => {
     const [favorite, setFavorite] = useState(false)
     const addFavorite = () =>{
         if(favorite === true) setFavorite(false)
         else setFavorite(true)
+        favoriteOnclick()
     } 
     return (
         <div className={styles.card}>
@@ -36,7 +39,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 </div>
                 <p className={styles.price}>${product.price}</p>
                 <div className={styles.buttonContainer}>
-                    <Button>Add to Cart</Button>
+                    <Button onClick={cartOnclick}>Add to Cart</Button>
                 </div>
             </div>
         </div>

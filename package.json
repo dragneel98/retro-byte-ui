@@ -10,6 +10,34 @@
   "files": [
     "dist"
   ],
+  "release": {
+    "branches": [
+      "master",
+      "next"
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ],
   "main": "./dist/retro-byte-ui.umd.cjs",
   "module": "./dist/retro-byte-ui.js",
   "exports": {
@@ -39,6 +67,8 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-essentials": "^8.2.8",
     "@storybook/addon-interactions": "^8.2.8",
     "@storybook/addon-links": "^8.2.8",
