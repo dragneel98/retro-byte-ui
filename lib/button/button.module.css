@@ -24,7 +24,11 @@
   
   .button:hover {
     background-color: var(--border-bottom-color);
+    transform: scale(1.1);
   }
+  .button:active{
+    transform: scale(1);
+}
   
   .secondary {
     background-color: transparent;

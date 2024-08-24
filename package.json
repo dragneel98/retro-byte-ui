@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/dragneel98/retro-byte-ui"
   },
-  "homepage": "https://github.com/dragneel98/retro-byte-ui",
+  "homepage": "https://retro-byte-ui.vercel.app/?path=/docs/components-accordion--docs",
   "files": [
     "dist"
   ],
@@ -57,7 +57,6 @@
     "commit": "cz"
   },
   "dependencies": {
-    "nretro-ui": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.52.2",

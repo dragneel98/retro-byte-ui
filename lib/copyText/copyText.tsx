@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './copyText.module.css';
 import { GoCopy } from "react-icons/go";
 
