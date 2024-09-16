@@ -6,7 +6,7 @@ interface TextInputProps {
     label: string;
     primaryColor?: string;
     secondaryColor?: string;
-    register: UseFormRegisterReturn; // Usar la interfaz del formulario para tipar register
+    register?: UseFormRegisterReturn; // Usar la interfaz del formulario para tipar register
 }
 
 export const TextInput: React.FC<TextInputProps> = ({ label, primaryColor, secondaryColor, register}) => {

@@ -17,13 +17,15 @@ type Story = StoryObj<typeof TextArea>;
 export const Primary: Story = {
     args: {
         placeholder: "¡¿Qué está pasando!?",
+        primaryColor: "#b1b0b0",
+        secondaryColor:"rgb(255, 255, 255)"
     },
 };
 
-export const EjemploDeTextArea: React.FC = () => {
+export const TextAreaSizeExample: React.FC = () => {
     return (
         <div style={{ width: "150px" }}>
-            <TextArea placeholder="hola" />
+            <TextArea placeholder="hola" maxHeight={"1em"}/>
         </div>
     );
 };

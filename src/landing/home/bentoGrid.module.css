@@ -1,0 +1,61 @@
+.bentoContainer {
+    display: grid;
+    grid-template-areas: 
+        "item1 item2 item3"
+        "item4 logo item5"
+        "item4 item6 item6";
+    gap: 10px;
+    width: 100%;
+    margin: 1em;
+    justify-items: center;
+    align-items: center;
+}
+
+.bentoItem {
+    /* background-color: transparent; */
+    /* border: 2px solid #fbc02d; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3;}
+.item4 { 
+    grid-area: item4; 
+    height: 100%;  /* Asegura que ocupe toda la altura del área asignada */
+}
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.logo { 
+    grid-area: logo;
+    /* background-color: #fff;
+    border: 2px solid #ccc; */
+}
+
+/* otros estilos */
+.accordionContainer{
+    width: 300px;
+    font-weight: lighter;
+    /* height: 100%; */
+}
+.userContainer{
+    height: 60px;
+}
+
+.productContainer{
+    background: var(--background-color);
+    border-radius: 14px;
+    width: 250px;
+}
+
+.adCartContainer{
+    width: 300px;
+    height: 250px;
+}

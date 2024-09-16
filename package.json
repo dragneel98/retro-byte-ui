@@ -7,6 +7,10 @@
     "url": "https://github.com/dragneel98/retro-byte-ui"
   },
   "homepage": "https://retro-byte-ui.vercel.app/?path=/docs/components-accordion--docs",
+  "keywords": [
+    "front-end",
+    "react"
+  ],
   "files": [
     "dist"
   ],

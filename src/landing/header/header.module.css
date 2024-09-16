@@ -1,0 +1,55 @@
+.header{
+    font-family: "ndot";
+    font-size: 1.3em;
+    background-color: var(--nav-color);
+    color: var(--primary-color);
+    padding: 1em 0;
+}
+
+.upHeader{
+    font-family: "ntype";
+    display: flex;
+    border-bottom: 1px solid var(--border-bottom-color-dark);
+    justify-content: center;
+    align-items: baseline;
+    gap: 1em;
+}
+
+.container{
+    padding: 0.5em;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.iconContainer{
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.button:hover{
+    color: var(--grey-color);
+}
+
+.socialIcon{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.searchContainer{
+    display: flex;
+    background-color: var(--search-color);
+    border-radius: 0.5em;
+    align-items: center;
+    padding: 0.3em 0.5em;
+}
+
+.search{
+    background-color: var(--search-color);
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0 0.5em;
+}

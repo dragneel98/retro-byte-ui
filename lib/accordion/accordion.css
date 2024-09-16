@@ -51,7 +51,8 @@ details>div {
 
 details[open] {
   max-height: 400px;
-  transition: max-height 0.6s ease-in-out;
+  /* transition: max-height 0.6s ease-in-out; */
+  transition: max-height 0.8s ease-in-out;
 }
 
 details[open] summary::before {

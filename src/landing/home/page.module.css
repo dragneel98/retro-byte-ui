@@ -1,0 +1,53 @@
+/* .backGroundImage{
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+} */
+
+.landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    background-color: var(--secondary-color);
+    height: 85vh;
+}
+
+.principalContainer{
+    margin: 1em;
+    margin-left: 5em;
+}
+.principal{
+    color: var(--primary-color);
+    font-size: 3em;
+    font-family: ntype;
+    line-height: 120%;
+    width: 12em;
+    text-wrap: pretty;
+}
+
+.secondary{
+    color: var(--grey-color);
+    margin-bottom: 1em;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: var(--secondary-color);
+}
+.specialWord{
+    color: var(--red);
+    font-family: ndot;
+}
+.specialWord2{
+    color: var(--grey-color);
+    font-family: ndot;
+}
+
+.copyContainer{
+    display: flex;
+    gap: 1em;
+}

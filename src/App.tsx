@@ -1,10 +1,10 @@
-// import { Button } from "retro-byte-ui"
-
+import { Landing } from "./landing/home/landing"
+import "./App.css"
 function App() {
-
+  // hacer toltip, checkbox, slider, switch
   return (
     <>
-      {/* <Button>button</Button> */}
+    <Landing></Landing>
     </>
   )
 }
