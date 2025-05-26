@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { StyleSheet, TouchableOpacity, Text, Platform } from 'react-native';
 
 interface ButtonProps {
   children: ReactNode;
@@ -7,61 +6,52 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const styles = StyleSheet.create({
+const styles = {
   button: {
-    paddingHorizontal: 18,
-    paddingVertical: 10,
-    borderRadius: 16,
+    paddingLeft: '18px',
+    paddingRight: '18px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    borderRadius: '16px',
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    border: 'none',
+    cursor: 'pointer',
+    fontFamily: 'ndot',
   },
   primary: {
     backgroundColor: '#C8102E',
+    color: '#ffffff',
   },
   secondary: {
     backgroundColor: '#ccc',
+    color: '#000000',
   },
   tertiary: {
     backgroundColor: 'transparent',
+    color: '#C8102E',
   },
   text: {
-    color: '#ffffff',
-    fontSize: 16,
+    fontSize: '16px',
     fontWeight: 'bold',
-    ...Platform.select({
-      web: {
-        fontFamily: 'ndot',
-      },
-      default: {
-        fontFamily: Platform.OS === 'ios' ? 'System' : 'Roboto',
-      }
-    })
-  },
-  secondaryText: {
-    color: '#000000',
-  },
-  tertiaryText: {
-    color: '#C8102E',
   }
-});
+};
 
 export const Button: React.FC<ButtonProps> = ({ children, type = "primary", onClick }) => {
-  const buttonStyle = [
-    styles.button,
-    type === "primary" && styles.primary,
-    type === "secondary" && styles.secondary,
-    type === "tertiary" && styles.tertiary,
-  ];
-
-  const textStyle = [
-    styles.text,
-    type === "secondary" && styles.secondaryText,
-    type === "tertiary" && styles.tertiaryText,
-  ];
+  const buttonStyle = {
+    ...styles.button,
+    ...(type === "primary" ? styles.primary : {}),
+    ...(type === "secondary" ? styles.secondary : {}),
+    ...(type === "tertiary" ? styles.tertiary : {})
+  };
 
   return (
-    <TouchableOpacity style={buttonStyle} onPress={onClick}>
-      <Text style={textStyle}>{children}</Text>
-    </TouchableOpacity>
+    <button 
+      style={buttonStyle} 
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 };
